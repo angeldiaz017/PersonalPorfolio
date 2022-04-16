@@ -1,0 +1,132 @@
+*{
+    font-family: 'Oswald','Source Sans Pro', sans-serif;
+    margin: 0;
+}
+
+
+.btn-outline-danger{
+    color: rgb(242, 66, 54) ;
+    border-color: rgb(242, 66, 54);
+    border-radius: 20rem;
+    border-style: solid;
+    font-size: larger;
+}
+
+.btn-outline-danger :hover{
+    background-color: rgb(242, 66, 54);
+}
+
+h3, h6{
+    font-style: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+
+h5{
+    color:#dc3545 ;
+    font-style: bold;
+}
+#text-header{
+    color: #141c3a;
+}
+
+.bg-danger{
+    background-color: rgb(155, 25, 16) ; 
+}
+
+#card-body{
+    background-color: rgb(155, 25, 16) ; 
+    color: white;
+}
+
+.container{
+    margin-right: 0;
+    padding-right: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+ 
+
+.photo{
+    display: block;
+    margin-top: 4rem;
+
+}
+
+.info_card{
+    margin-top: -10rem;
+}
+
+.icon{
+    color: #dc3545;
+    
+}
+
+p{
+    font-style: italic;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.card_subtitle{
+    font-family: 'Oswald','Source Sans Pro', sans-serif;
+    font-style: bold;
+}
+
+.card-height{
+    height: 340px;
+}
+
+.card-description{
+    margin-top: 4rem;
+    margin-left: 25%;
+}
+
+@media (max-width : 1588px) {
+    .card-height{
+        height: 550px;
+    }
+}
+
+.contact{
+    margin-left: -1rem;
+}
+
+.box{
+    
+    border: solid 3px #dc3545 ;
+    border-radius: 1.5rem;
+}
+
+/* smartphone */
+
+@media (max-width : 500px){
+    .col-3, .col-6, .card-description{
+        width: 100%;
+        margin-left : 0px;  
+               
+    }
+    .logo{ 
+        max-width: 280px;
+    }
+    .contact{
+        max-width: 100px;
+    }
+    .rojo{
+        display: none;
+    }
+    .photo{
+        margin-bottom: 4rem;
+    }
+}
+
+
+
+
