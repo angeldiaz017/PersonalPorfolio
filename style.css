@@ -1,33 +1,39 @@
 *{
     font-family: 'Oswald','Source Sans Pro', sans-serif;
     margin: 0;
+   
 }
 
 
-.btn-outline-danger{
-    color: rgb(242, 66, 54) ;
-    border-color: rgb(242, 66, 54);
-    border-radius: 20rem;
+#contact{
+    color: #474747 ;
+    border-color: #474747;
+    border-radius: 1rem;
     border-style: solid;
     font-size: larger;
 }
 
-.btn-outline-danger :hover{
-    background-color: rgb(242, 66, 54);
+#contact:hover{
+    background-color: #c7ef00;
+    color: black;
 }
 
 h3, h6{
     font-style: bold;
     font-family: 'Source Sans Pro', sans-serif;
+    color: #c7ef00;
     
+}
+h4{
+    color: white;
 }
 
 h5{
-    color:#dc3545 ;
+    color:whitesmoke ;
     font-style: bold;
 }
 #text-header{
-    color: #141c3a;
+    color:  white;
 }
 
 .bg-danger{
@@ -35,8 +41,14 @@ h5{
 }
 
 #card-body{
-    background-color: rgb(155, 25, 16) ; 
+    background-color: rgb(0, 0, 0) ; 
     color: white;
+}
+
+#subheader-card{
+    font-style: bold;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #A2ABAB;
 }
 
 .container{
@@ -47,6 +59,7 @@ h5{
 body{
     margin: 0;
     padding: 0;
+    background-color: black;
 }
 
 .container{
@@ -57,8 +70,13 @@ body{
 
 .photo{
     display: block;
-    margin-top: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
 
+}
+
+#description{
+    border-color: #c7ef00;
 }
 
 .info_card{
@@ -66,7 +84,7 @@ body{
 }
 
 .icon{
-    color: #dc3545;
+    color: #CC2936;
     
 }
 
@@ -75,10 +93,7 @@ p{
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-.card_subtitle{
-    font-family: 'Oswald','Source Sans Pro', sans-serif;
-    font-style: bold;
-}
+
 
 .card-height{
     height: 340px;
@@ -86,7 +101,11 @@ p{
 
 .card-description{
     margin-top: 4rem;
-    margin-left: 25%;
+    margin-left: 22%;
+    border-color: #c7ef00;
+}
+#cards{
+    background-color: black;
 }
 
 @media (max-width : 1588px) {
@@ -95,14 +114,11 @@ p{
     }
 }
 
-.contact{
-    margin-left: -1rem;
-}
 
 .box{
     
     border: solid 3px #dc3545 ;
-    border-radius: 1.5rem;
+    border-radius: .5rem;
 }
 
 /* smartphone */
@@ -127,6 +143,25 @@ p{
     }
 }
 
+@keyframes animate1{
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+}
 
+.icon-img{
+    animation: animate1 8s forwards ease-in-out;
+    animation-iteration-count: infinite;
+}
 
-
+.iframe-visor{
+    height: 100vh;
+    border: 5px solid;
+    border-color: #c7ef00;
+}
