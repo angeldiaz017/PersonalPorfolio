@@ -96,9 +96,9 @@ p{
     display: none;
 }
 
-.card-height{
+/* .card-height{
     height: 340px;
-}
+} */
 
 .card-description{
     margin-top: 4rem;
@@ -109,11 +109,6 @@ p{
     background-color: black;
 }
 
-@media (max-width : 1588px) {
-    .card-height{
-        height: 550px;
-    }
-}
 #linkedin{
    text-align: center;
 }
@@ -121,23 +116,18 @@ p{
 /* smartphone */
 
 @media (max-width : 650px){
-    h4{
-        font-size: 11px;
-    }
 
-    h6{
-        font-size: 10px;
-    }
     .col-3, .col-6, .card-description{
         width: 100%;
         margin-left : 0px;  
                
     }
     .logo{ 
-        max-width: 280px;
-    }
-    .contact{
         max-width: 100px;
+    }
+    #contact{
+        max-width: 100px;
+        margin-top: -2vh;
     }
     .rojo{
         display: none;
@@ -151,6 +141,11 @@ p{
         margin-top: 1rem;
         background-color: green;
         /* margin-left: -1.5rem; */
+    }
+
+    .info_card{
+        width: 90vw;
+        margin-top: 1vh;
     }
 
     #linkedin{
@@ -176,9 +171,9 @@ p{
         display: block;
         padding-left: 0;
     }
-    #recent-work{
+    /* #recent-work{
         margin-top: 60vh;
-    }
+    } */
     #link{
         margin-left: -12vw;
     }
