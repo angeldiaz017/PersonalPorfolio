@@ -121,6 +121,13 @@ p{
 /* smartphone */
 
 @media (max-width : 650px){
+    h4{
+        font-size: 11px;
+    }
+
+    h6{
+        font-size: 10px;
+    }
     .col-3, .col-6, .card-description{
         width: 100%;
         margin-left : 0px;  
