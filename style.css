@@ -11,6 +11,7 @@
     border-radius: 1rem;
     border-style: solid;
     font-size: larger;
+    margin-left: -1.5vw;
 }
 
 #contact:hover{
@@ -75,9 +76,7 @@ body{
 
 }
 
-#description{
-    border-color: #c7ef00;
-}
+
 
 .info_card{
     margin-top: -10rem;
@@ -93,7 +92,9 @@ p{
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-
+#movil-display{
+    display: none;
+}
 
 .card-height{
     height: 340px;
@@ -113,17 +114,13 @@ p{
         height: 550px;
     }
 }
-
-
-.box{
-    
-    border: solid 3px #dc3545 ;
-    border-radius: .5rem;
+#linkedin{
+   text-align: center;
 }
 
 /* smartphone */
 
-@media (max-width : 500px){
+@media (max-width : 650px){
     .col-3, .col-6, .card-description{
         width: 100%;
         margin-left : 0px;  
@@ -141,6 +138,44 @@ p{
     .photo{
         margin-bottom: 4rem;
     }
+    #content-anchor{
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        background-color: green;
+        /* margin-left: -1.5rem; */
+    }
+
+    #linkedin{
+        /* margin-left: rem; */
+        padding-left: 0rem;
+        max-width: 350px;
+    }
+
+    #description{
+        margin-left: 0px;
+    }
+
+    #cards{
+        max-width: 80vw;
+        padding-left: 5vw;
+    }
+
+    .iframe-visor{
+        display: none;
+    }
+
+    #movil-display{
+        display: block;
+        padding-left: 0;
+    }
+    #recent-work{
+        margin-top: 60vh;
+    }
+    #link{
+        margin-left: -12vw;
+    }
+
 }
 
 @keyframes animate1{
