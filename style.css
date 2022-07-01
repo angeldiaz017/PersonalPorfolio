@@ -178,6 +178,9 @@ p{
         margin-left: -12vw;
     }
 
+    .video{
+        max-height: 168px ;
+    }
 }
 
 @keyframes animate1{
