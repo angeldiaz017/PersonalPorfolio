@@ -1,7 +1,11 @@
+/* html{
+    margin: 0px;
+    padding-right: 0px;
+} */
 *{
     font-family: 'Oswald','Source Sans Pro', sans-serif;
     margin: 0;
-   
+    padding: 0;
 }
 
 
@@ -76,7 +80,13 @@ body{
 
 }
 
-
+#code{
+    /* padding: 5%; */
+    color: white;
+    background-color: #474747;
+    font-style: normal;
+    font-family:'Source Sans Pro', sans-serif;
+}
 
 .info_card{
     margin-top: -10rem;
@@ -180,6 +190,13 @@ p{
 
     .video{
         max-height: 168px ;
+    }
+   .table{
+        font-size: 10px;
+        font-style: normal;
+    }
+    .tabla{
+        width: 100%;
     }
 }
 
