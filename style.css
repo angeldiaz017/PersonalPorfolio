@@ -42,7 +42,7 @@
     border-width: thin;
     width: 2px; /* Grosor del borde */
     background: linear-gradient(var(--start-color, #b3448e), var(--end-color, #af9268));
-    /* background: linear-gradient(#b3448e,#af9268 ); Degradado desde lila hasta naranja */
+    /* background: linear-gradient(#b3448e,#af9268 ); Degradado desde #0aefff hasta #ffd300 */
 }
 
 .description_2{
@@ -87,8 +87,16 @@
     right: 0;
     bottom: 0;
     height: 2px; /* Grosor del "subrayado" */
-    background: linear-gradient(to right,var(--start-color, #b3448e), var(--end-color, #af9268)); /* Degradado de lila a naranja */
+    background: linear-gradient(to right,var(--start-color, #b3448e), var(--end-color, #af9268)); /* Degradado de #0aefff a #ffd300 */
 }
+
+.description_4 {
+    border: 2px solid;
+    border-image-slice: 1;
+    border-image-repeat: stretch;
+}
+
+
 ul {
     list-style-type: none; /* Elimina los puntos de la lista */
     padding-left: 0; /* Opcional: elimina el padding izquierdo predeterminado para alinear el contenido a la izquierda */
@@ -147,6 +155,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: #1d1d20;
+    overflow-x: hidden;
 }
 
 .container{
@@ -302,3 +311,35 @@ p{
 }
 
 /* border-success */
+.terminal {
+    background-color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    min-width: 65vw;
+}
+.boton {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.boton.rojo {
+    background-color: #ff5f56;
+}
+
+.boton.amarillo {
+    background-color: #ffbd2e;
+}
+
+.boton.verde {
+    background-color: #27c93f;
+}
+
+pre {
+    color: #ffffff;
+    margin: 0;
+}

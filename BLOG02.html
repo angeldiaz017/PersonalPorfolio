@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Ángel Díaz</title>
+    <link rel="icon" type="image/png " href="main/src/AD.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WZP29F65N"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8WZP29F65N');
+    </script>
+</head>
+<body>
+    <div class="container-fluid mx-0 px-0" >
+        <div class="row mx-0 ">
+
+            <div class="col-md-8 text-left" >
+                <a href="./index.html">
+                    <img class="img-fluid mx-1" height="60" width="60" src="main/src/AD.png" alt="Angel's logo">
+                </a>
+            </div>
+
+            <div class="col-md-4 m-0 mt-4">
+                <div class="buttons btn-group col-md-5 float-end m-2">
+                    <a class="p-2" target="_blank"  href="https://www.linkedin.com/in/angeldiazmurillo/">
+                        <img src="main/src/linkedin.png" height="20" width="20" alt="">
+                    </a>
+                    <a class="p-2" target="_blank"  href="mailto:angel_diaz_murillo@hotmail.com">
+                        <img src="main/src/email.png" height="20" width="20" alt="">
+                    </a>
+                    <a class="p-2" target="_blank"  href="https://github.com/angeldiaz017">
+                        <img src="main/src/github.png" height="20" width="20" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center" >
+            <div class="col-md-8 ps-4">
+                <h1 class="p-4 ps-0" style="color: white;">Datos Caseros.</h1>
+                <div class="card-body description p-6"style="--start-color: #0aefff; --end-color: #ff1791;">
+
+                    <section>
+                        <h3>Introducción</h3>
+                        <h6 class="mt-4">En el emocionante mundo de la <b style="color: #ff1791;">IA y el Big Data,</b>  los datos son el activo más valioso, pero a menudo no son fáciles de obtener. Cuando nos aventuramos en este apasionante campo, contar con datos de calidad es esencial para poner a prueba nuestras habilidades emergentes. Y, si esos datos son de nuestro interés, ¡mucho mejor!</h6>
+                        <h6 class="mt-4">No hay nada como convertir una pasión en una oportunidad para aplicar todas las habilidades que estamos adquiriendo en este viaje continuo hacia la digitalización. En este post, quiero compartir cómo puedes adquirir datos para <b style="color: #ff1791;">entrenar</b> tus modelos de manera sencilla.</h6>
+                        <h6 class="mt-4">Personalmente, soy un apasionado de la <b style="color: #ff1791;">Formula 1,</b> un deporte que genera una inmensa cantidad de datos en tiempo real. Si bien no podemos medir la velocidad del morro de los coches cada segundo, tenemos acceso a una gran cantidad de información para construir nuestros propios datasets.</h6>
+                        <h6 class="mt-4">En el sitio web de la <b style="color: #ff1791;">FIA</b> podemos obtener los tiempos por vuelta de todos los pilotos en cada sesión. Estos datos están estructurados de manera consistente, lo que facilita su extracción. Además, suelen seguir un patrón de nomenclatura similar. Con un simple script de Python, podemos descargar y procesar esta información, siempre respetando los propósitos académicos e informativos.</h6>
+                        <h6 class="mt-4">Un PDF de tiempos de una sesión de la FIA es así:</h6>
+
+                        <img class="mt-4" src="main/src/02_F1/TIEMPOS.png" width="100%" alt="">
+                    </section>
+            
+                    <section>
+                        <h3 class="mt-4">Script de python</h3>
+                        <h6>Con una pequeña rutina de <b style="color: #ff1791;">python</b> se puede extraer todos los tiempos por vuelta:</h6>
+                        <div class="terminal">
+                            <div class="header">
+                                <span class="boton rojo"></span>
+                                <span class="boton amarillo"></span>
+                                <span class="boton verde"></span>
+                            </div>
+                            <pre>
+                                <code class="code" style="overflow-x: hidden;">
+    import PyPDF2
+    pdf = path_data + '/' + file
+    archivo_pdf = open(pdf, 'rb')
+    pdf_reader = PyPDF2.PdfReader(archivo_pdf)
+    contenido_pdf = []
+    words = ['NO', 'TIME', 'P', '']
+    
+    words += ['TheF', 'FORMULA', 'logo,F', 'logo,FORMULA', ',FORMULAONE,F',
+                ',FIAFORMULAONEWORLDCHAMPIONSHIP,GRANDPRIXandrelatedmarksaretrademarksofFormulaOneLicensingBV,a', 'Formula',
+                'company.TheFIAlogoisatrademarkoftheFédérationInternationaledel', '’', 'Automobile.Allrightsreserved.',
+                'Nopartoftheseresults/datamaybereproduced,storedinaretrievalsystemortransmittedinanyformorbyanymeanselectronic,mechanical,photocopying,recording,broadcastingorotherwisewithout',
+                'priorpermissionofthecopyrightholderexceptforreproductioninlocal/national/internationaldailypressandregularprintedpublicationsonsaletothepublicwithin',
+                '90', 'daysoftheeventtowhichthe',
+                'results/datarelateandprovidedthatthecopyrightsymbolandnameofcopyrightownerappears.',
+                '©2022FormulaOneWorldChampionshipLimited', 'Page3of3', 'FORMULA1GULFAIRBAHRAINGRANDPRIX2022-Sakhir',
+                'FirstPracticeSessionLapTimes', 'LAP']
+    pilots = ['Lewis Hamilton', 'Valtteri Bottas', 'Max Verstappen', 'Sergio Perez', 'Lando Norris', 'Oscar Piastri',
+                'Charles Leclerc', 'Carlos Sainz', 'Pierre Gasly', 'Yuki Tsunoda', 'Fernando Alonso', 'Esteban Ocon',
+                'Nyck DE VRIES', 'Lance Stroll', 'ZHOU Guanyu', 'Logan SARGEANT', 'Kevin MAGNUSSEN', 'Nico HULKENBERG',
+                'George Russell', 'Alexander ALBON']
+    lap_data = {}
+    lap_id = []
+    minimum_laps = []
+    min_laps_order = []
+    
+    for i in range(len(pilots)):
+        pilots[i] = pilots[i].replace(' ', '').upper()
+    
+    for pagina in range(len(pdf_reader.pages)):
+        pagina_actual = pdf_reader.pages[pagina]
+        contenido_pdf.append(pagina_actual.extract_text())
+    
+    pdf_data = []
+    for page in contenido_pdf:
+        line_list = page.split('\n')
+        data = []
+        for i in range(len(line_list)):
+            line_list[i] = line_list[i].replace(' ', '')
+    
+        for line in line_list:
+            if line not in words:
+                data.append(line)
+        pdf_data += data
+    
+    for i in range(len(pdf_data)):
+        if pdf_data[i].upper() in pilots:
+            lap_data[pdf_data[i]] = {}
+            lap_id.append(i)
+    
+    for i in range(len(lap_id)):
+        start = lap_id[i]
+        if i < len(lap_id) - 1:
+            end = lap_id[i + 1]
+    
+        else:
+            end = len(pdf_data)
+    
+        for j in range(start + 1, end, 2):
+            lap_num = pdf_data[j]
+            if j < len(pdf_data) - 1:
+    
+                lap_time = pdf_data[j + 1]
+                if ':' in lap_time:
+                    lap_data[list(lap_data.keys())[i]][int(lap_num)] = lap_time
+    
+    
+    for pilot_id in lap_data:
+    
+        new_laps = {}
+        laps = lap_data[pilot_id]
+        lap_order = sorted(list(laps.keys()))
+        for l_id in lap_order:
+            new_laps[l_id] = laps[l_id]
+        lap_data[pilot_id] = new_laps
+    
+    
+        stint = 0
+    
+        stint_id = 1
+        all_laps = []
+    
+        for num_lap in range(len(lap_data[pilot_id].keys())+1):
+            if num_lap == 0:
+                continue
+            time_str_sec = float(lap_data[pilot_id][num_lap].split(':')[1])
+            time_str_min = int(lap_data[pilot_id][num_lap].split(':')[0])
+            complete_time = time_str_min*60 + time_str_sec
+            all_laps.append(complete_time)
+            lap_data[pilot_id][num_lap] = {
+                'min' : time_str_min,
+                'sec' : time_str_sec,
+                'complete' : complete_time
+            }
+    
+    
+            if time_str_min >= 2:
+                stint += 1
+                stint_name =  'E' + str(stint_id)
+                stint_id +=1
+    
+            stint_name = 'E' + str(stint_id)
+            stint_name = 'F' + str(stint_id)
+            stint_id += 1
+            lap_data[pilot_id][num_lap]['stint'] = stint
+    
+        if len(all_laps)>0:
+            min_lap = sorted(all_laps)[0]
+            minimum_laps.append([pilot_id,min_lap])
+            min_laps_order.append(min_lap)
+    
+    
+    i=0
+    min_laps_order.sort()
+    new_fast_laps = []
+    for lap in min_laps_order:
+        filtered = list(filter(lambda x: x[1] == lap, minimum_laps))
+        new_fast_laps.append(filtered[0])
+    csv = open('f1_data.csv', 'w')
+    for pilot_id in lap_data:
+        for num_lap in lap_data[pilot_id]:
+            lap = lap_data[pilot_id][num_lap]
+            line = gp + ';' + session + ';' + pilot_id + ';' + str(num_lap) + ';' +  str(lap['complete'])  + ';' + str(lap['stint']) + '\n'
+            csv_data.append(line)
+    csv.writelines(csv_data)
+    csv.close()
+                                </code>
+                            </pre>
+                        </div>
+                        
+                    </section>
+            
+                    <section>
+                        <h3 class="mt-4">Resultado</h3>
+                        <h6 class="mt-4">Con esta pequeña rutina de <b style="color: #ff1791;">python</b> se puede almacenar en un csv los datos de las vueltas de la sesión. El csv se ve tal que así:</h6>
+                        <div class="terminal mt-4">
+                            <div class="header">
+                                <span class="boton rojo"></span>
+                                <span class="boton amarillo"></span>
+                                <span class="boton verde"></span>
+                            </div>
+                            <pre>
+                                <code class="code" style="overflow-x: hidden;">
+GP;SESSION;PILOT;LAP;LAPTIME;STINT
+BAHRAIN23;FP2;MaxVERSTAPPEN;1;1084.0;1
+BAHRAIN23;FP2;MaxVERSTAPPEN;2;93.009;1
+BAHRAIN23;FP2;MaxVERSTAPPEN;3;196.275;2
+BAHRAIN23;FP2;MaxVERSTAPPEN;4;139.137;3
+BAHRAIN23;FP2;MaxVERSTAPPEN;5;92.794;3
+BAHRAIN23;FP2;MaxVERSTAPPEN;6;103.785;3
+BAHRAIN23;FP2;MaxVERSTAPPEN;7;720.142;4
+BAHRAIN23;FP2;MaxVERSTAPPEN;8;91.076;4
+BAHRAIN23;FP2;MaxVERSTAPPEN;9;123.69200000000001;5
+BAHRAIN23;FP2;MaxVERSTAPPEN;10;610.539;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;11;97.64099999999999;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;12;97.136;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;13;96.898;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;14;97.179;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;15;96.827;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;16;97.22999999999999;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;17;97.324;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;18;110.625;6
+BAHRAIN23;FP2;MaxVERSTAPPEN;19;97.268;6
+                                </code></pre>
+                        </div>
+                        <h6 class="mt-4">Una vez que se tiene los datos, se pueden utilizar las técnicas de<b style="color: #ff1791;"> BIG Data e IA</b> con este dataset para entrenar lo que hemos aprendido. Por ejemplo, se pueden sacar datos <b style="color: #ff1791;">comparando</b> pilotos:</h6>
+                        <img class="mt-4" src="main/src/02_F1/Norris-Piastri-GREATBRITAIN23-Q.png" alt="" width="100%">
+                        <h6 class="mt-4">El histórico de posiciones de una <b style="color: #ff1791;">carrera:</b></h6>
+                        <img class="mt-4" src="main/src/02_F1/AUS - POS.png" alt="" width="100%">
+                        <h6 class="mt-4">Y la frecuencia con la que acaban en un puesto los <b style="color: #ff1791;">mejores pilotos</b> de la parrilla:</h6>
+                        <img class="mt-4" src="main/src/02_F1/HIS-POS.png" alt="" width="100%">
+                        <h6 class="mt-4">Es una forma muy sencilla de generar nuestro propio <b style="color: #ff1791;">dataset,</b> algo que creo que es muy valioso en el proceso de formación en este campo.</h6>
+                    </section>
+
+                    <h6>¿Te ha parecido interesante? <a href="https://www.linkedin.com/in/angeldiazmurillo/" style="text-decoration: none;" target="_blank"><b style="color: #ff1791;">Conéctate conmigo en Linkedin</b></a> para seguir compartiendo ideas y experiencias en este apasionante campo.</h6>
+
+                </div>
+            </div>
+            <div class="col-md-2 m-4" style="padding-left: 10%;">
+                <div class="card-body rounded description pt-4" style="--start-color: #0aefff; --end-color: #ff1791;"><a href="./IA.html" style="text-decoration: none;"><h5>Atrás</h5></a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
